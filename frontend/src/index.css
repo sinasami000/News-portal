@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-900 font-sans;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-crimson-600 hover:bg-crimson-700 text-white font-sans font-medium px-6 py-2.5 rounded-sm transition-all duration-200 inline-block;
+  }
+
+  .btn-secondary {
+    @apply border border-ink-800 hover:bg-ink-800 hover:text-white text-ink-800 font-sans font-medium px-6 py-2.5 rounded-sm transition-all duration-200 inline-block;
+  }
+
+  .btn-outline-red {
+    @apply border border-crimson-600 text-crimson-600 hover:bg-crimson-600 hover:text-white font-sans font-medium px-5 py-2 rounded-sm transition-all duration-200 inline-block text-sm;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl font-bold text-ink-900 mb-2;
+  }
+
+  .section-divider {
+    @apply flex items-center gap-3 mb-8;
+  }
+
+  .section-divider::after {
+    content: '';
+    @apply flex-1 h-px bg-ink-200;
+  }
+
+  .category-badge {
+    @apply text-xs font-mono font-medium tracking-widest uppercase px-3 py-1 bg-crimson-600 text-white inline-block;
+  }
+
+  .input-field {
+    @apply w-full border border-ink-200 bg-white px-4 py-3 font-sans text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-crimson-500 focus:ring-1 focus:ring-crimson-500 transition-colors rounded-sm;
+  }
+
+  .news-content p {
+    @apply mb-4 leading-relaxed text-ink-700;
+  }
+
+  .news-content h2 {
+    @apply text-2xl font-serif font-bold text-ink-900 mt-8 mb-4;
+  }
+
+  .news-content h3 {
+    @apply text-xl font-serif font-bold text-ink-900 mt-6 mb-3;
+  }
+
+  .news-content ul, .news-content ol {
+    @apply ml-6 mb-4 text-ink-700;
+  }
+
+  .news-content li {
+    @apply mb-2;
+  }
+
+  .news-content blockquote {
+    @apply border-l-4 border-crimson-500 pl-6 py-2 my-6 italic text-ink-600 font-serif text-lg;
+  }
+}
+
+/* Newspaper-style decorative line */
+.double-rule {
+  border-top: 3px double #40362a;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f6f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0b49a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8f7d5e;
+}
+
+/* Page transition */
+.page-enter {
+  animation: fadeIn 0.35s ease-in-out;
+}
