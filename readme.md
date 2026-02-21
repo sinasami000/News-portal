@@ -101,8 +101,6 @@ npm run build
 ### 3. Access the App
 
 - **Frontend:** http://localhost:5173
-- **Backend API:** http://localhost:5000
-- **API Health Check:** http://localhost:5000/
 
 ---
 
